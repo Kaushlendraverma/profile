@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>KV</title>
+  <title>NB</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,34 +26,58 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link media="screen" href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!-- =======================================================
-  * Template Name: Personal - v4.2.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="assets/css/map_.css">
+  <link rel="stylesheet" href="assets/css/gallery_style.css">
+  <link rel="stylesheet" href="assets/css/spotlight.min.css">
+  <!-- jQuery -->
+<!--   <script  type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link    href="assets/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script  type="text/javascript" src="assets/js/jquery.nanogallery2.min.js"></script> -->
+
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.21.8/babel.js"></script>
+
+  <script src="https://unpkg.com/three@0.152.2/build/three.js"></script>
+  <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+
+  <script src="https://unpkg.com/react-globe.gl@2.24.1/dist/react-globe.gl.min.js"></script>
+  <!--<script src="../../dist/react-globe.gl.js"></script>-->
+
+  <script src="assets/js/spotlight.min.js"></script>
+
+  
 </head>
 
 <body>
-
+      <div id="particles-js"></div>
+    <div id="overlay">
   <!-- ======= Header ======= -->
   <header id="header">
+    <!-- <div id="particles-js"></div> -->
     <div class="container">
-      <h1 style="display: inline; color: #000000;"><a href="index.html">Kaushlendra <span style="color: #1af07d;">V.</span></a></h1>
+
+      
+      <h1 display:inline><a href="index.html">Kaushlendra <span style="color:#1af07d">V.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
       <h2 style="color: #000000;">Research is creating new <span style="color: #000000;">knowledge</span>." ~N. Armstrong</h2>
-	  
+
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header">Home</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#resume">Resume</a></li>
 <!--          <li><a class="nav-link" href="#services">Services</a></li>-->
-          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#portfolio">Publications</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -61,7 +85,8 @@
 
       <div class="social-links">
 
-        <a href="https://scholar.google.com/citations?hl=en&user=ra9JeXYAAAAJ" target="_blank"class="instagram">
+
+        <a href="https://scholar.google.com/citations?user=ra9JeXYAAAAJ&hl=en" target="_blank"class="instagram">
               <i><img src="assets/img/icons/gsw.png" width=25px></i></a>
         <a href="https://www.researchgate.net/profile/Kaushlendra-Verma-2"  target="_blank" class="instagram">
               <i><img src="assets/img/icons/rgw.png" width=25px></i></a>
@@ -72,8 +97,14 @@
         <a href="https://www.google.com/search?q=Kaushlendra Verma" target="_blank" class="search">
               <i class="bi bi-search"></i></a>
 
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
+
 
     <!-- ======= About Me ======= -->
     <div class="about-me container">
@@ -85,46 +116,51 @@
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me_bw.jpg" class="img-fluid" alt="" style="border-radius: 50%;">
+          <img src="assets/img/me_bw.png" class="img-fluid" alt="" style="border-radius: 50%;">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Research scholar </h3> <!--&amp; Graphic Designer</h3>-->
-          <p class="fst-italic">
-						
+          <h3>Postdoctoral Fellow </h3> <!--&amp; Graphic Designer</h3>-->
+<!--           <p class="fst-italic"> -->
+<!-- 						I am a passionate learner -->
+<!--           </p> -->
           <div class="row">
             <div class="col-lg-6">
               <ul>
 <!--                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>-->
-                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://github.com/Kaushlendraverma/profile" target="_blank">kaushlendraverma.github.io/profile</a></span></li>
-                
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Toulouse, France</span></li>
+<!--                 <li><em class="bi bi-chevron-right"></em> <strong>Website:</strong> <span><a href="https://narayana-rao.github.io" target="_blank">narayana-rao.github.io</a></span></li> -->
+                <li><i class="bi bi-chevron-right"></i> <strong>Affiliation:</strong> <span> Meteo-France </span></li>      
+                <!-- <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Mumbai, India</span></li> -->
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
 <!--                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>-->
                 <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>PhD in Remote Sensing </span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>
-                  <a href="mailto:er.kaushlendrav@gmail.com">er.kaushlendrav@gmail.com</a><br>
-                </span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="er.kaushlendrav@gmail.com">er.kaushlendrav@gmail.com</a></span></li>
+                <!-- <li><em class="bi bi-chevron-right"></em> <strong>Email:</strong> <span>
+                  <a href="mailto:narayanarao.bhogapurapu@gmail.com">narayanarao.bhogapurapu@gmail.com</a><br>
+                 --></span></li>
+<!--                 <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li> -->
               </ul>
             </div>
           </div>
           <p align="justify">
 
-			  <span style="color:#1af07d">Kaushlendra Verma</span> is pursuing a post-doctorate position at Meteo-France and was honored with the esteemed CNES Post-Doctoral Fellowship for 2022. His research focuses on the practical applications of the SWOT satellite-altimetry mission to enhance our understanding of global hydrology. Specifically, he is working on improving global hydrological simulations by utilizing the ISBA-CTRIP land atmospheric model and incorporating altimetry data assimilation.
+<!-- 			  <span style="color:#1af07d">Narayanarao Bhogapurapu</span> received the B.E. degree in civil engineering from Andhra University, India in 2016 and M.Tech in Remote Sensing and GIS from National Institute of Technology, Warangal, India in 2018. He is currently research scholar at MRSLab, Centre of Studies in Resources Engineering (CSRE), Indian Institute of Technology, Bombay. His research interest includes fusion of active and passive microwave remote sensing data for soil moisture retrieval. He did his masters thesis work on Ground Penetrating Radar at Space Applications Center-ISRO, Ahmedabad. -->
+		Kaushlendra Verma</span> is pursuing a post-doctorate position at Meteo-France and was honored with the esteemed CNES Post-Doctoral Fellowship for 2022. His research focuses on the practical applications of the SWOT satellite-altimetry mission to enhance our understanding of global hydrology. Specifically, he is working on improving global hydrological simulations by utilizing the ISBA-CTRIP land atmospheric model and incorporating altimetry data assimilation.
 Prior to current position, he has successfully completed his Ph.D. in Remote Sensing within the Civil Engineering department at the Indian Institute of Technology in Bombay, India. his doctoral research revolved around evaluating the effectiveness of Satellite Radar Altimetry in studying inland freshwater bodies. Additionally, he investigated the Error Budget and uncertainties associated with hydrological variables derived from satellites, aiming to enhance our knowledge of regional hydrology in Indian River Basins.
-          </p>
+		</p>
         </div>
       </div>
 
     </div><!-- End About Me -->
+
+
     <!-- ======= Interests ======= -->
     <div class="interests container">
 
       <div class="section-title">
-        <h2>Awards &amp; achievements </h2>
+        <h2>Fellowships, Grants  &amp;  Awards  </h2>
       </div>
 
       <div class="row">	  
@@ -133,51 +169,47 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
         <thead>
           <tr>
             <th class="tg-l1ar"><span style="font-style:normal;text-decoration:none">Name of award</span></th>
-            <th class="tg-l1ar"><span style="font-style:normal;text-decoration:none">Value</span></th>
             <th class="tg-l1ar"><span style="font-style:normal;text-decoration:none">Description</span></th>
             <th class="tg-l1ar"><span style="font-style:normal;text-decoration:none">Year</span></th>
           </tr>
         </thead>
         <tbody>
-		  <tr>
+          <tr>
             <td class="tg-syad">Post Doctorate</td>
-            <td class="tg-4f0n">€ 2500/ mo<br></td>
             <td class="tg-syad"><span style="font-weight:400;font-style:normal;text-decoration:none">This opportunity is provided by the </span> Centre National d'Etudes Spatiales through CNES-Post Doctoral Fellowship 2022.</td>
-            <td class="tg-4f0n">Mar,2023-2025<br></td>
+            <td class="tg-4f0n">Mar,2023-2025<br></td> 
           </tr>
-		
-		  <tr>
+
+          <tr>
             <td class="tg-syad">Research Internship</td>
-            <td class="tg-4f0n">€ 1500/ mo<br></td>
             <td class="tg-syad"><span style="font-weight:400;font-style:normal;text-decoration:none">This opportunity is provided by the </span> Department of Science and Technology India through DST-CNRS project.</td>
             <td class="tg-4f0n">Nov,2021- Jan,2022<br></td>
           </tr>
+
           <tr>
             <td class="tg-syad">AGU Fall Meeting 2021</td>
-            <td class="tg-4f0n">$ 1000<br></td>
             <td class="tg-syad"><span style="font-weight:400;font-style:normal;text-decoration:none">This competitive fellowship award is provided by the <a href="https://www.agu.org/">Americal Geophysical Union</a>  USA. </td>
             <td class="tg-4f0n">2021<br></td>
           </tr>
+
           <tr>
             <td class="tg-syad">Ph.D. Assistantship</td>
-            <td class="tg-4f0n">₹ 35000/ mo<br></td>
             <td class="tg-syad"><span style="font-weight:400;font-style:normal;text-decoration:none">This competitive fellowship award is provided by </span>the Ministry of Human Resource Development, Government of India.</td>
-            <td class="tg-4f0n"><span style="font-weight:400;font-style:normal;text-decoration:none">2019 - </span>Present</td>
+            <td class="tg-4f0n">2019</span></td>
           </tr>
+
           <tr>
             <td class="tg-syad">M.Tech Assistantship</td>
-            <td class="tg-4f0n">₹ 12500/ mo<br></td>
-            <td class="tg-syad"><span style="font-weight:400;font-style:normal;text-decoration:none">This competitive fellowship award is provided by </span>the Ministry of Human Resource Development, Government of India.</td>
+            <td class="tg-syad"><span style="font-weight:400;font-style:normal;text-decoration:none">TThis competitive fellowship award is provided by </span>the Ministry of Human Resource Development, Government of India.</td>
             <td class="tg-4f0n">2016 - 2018<br></td>
           </tr>
-          
+
         </tbody>
         </table>
 		  
       </div>
 
-    </div>
-	<!-- End Interests -->
+    </div><!-- End Interests -->
     <!-- ======= Skills  ======= -->
     <div class="skills container">
 
@@ -198,10 +230,11 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
           onclick="onClick(this)" class="w3-hover-opacity">
           Training on Science Journalism
         </div>
-        
 
 
       </div>
+
+
 
     </div><!-- End Skills -->
 
@@ -215,31 +248,12 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
       <div class="row">
         <h5 style="color:#1af07d;">Programming</h5>
         
-       
-        <!-- <div class="w-100"></div> -->
-
         <div class="col-6 col-sm-2">
                 <div data-animate-effect="fadeInRight" align="center">
                 <img src="assets/img/icons/python.png" alt="Python" width="50" height="50"><p>Python</p>
                   </div>
-        </div>
-
-        <div class="col-6 col-sm-2">
-        <div data-animate-effect="fadeInRight" align="center">
-        <img src="assets/img/icons/matlab.png" alt="MATLAB" width="50" height="50"><p>MATLAB</p>
-          </div>
-        </div>
-        <div class="col-6 col-sm-2">
-                <div data-animate-effect="fadeInRight" align="center">
-                <img src="assets/img/icons/rl.png" alt="R" width="50" height="50"><p>R</p>
-                  </div>
-        </div>
-
-<!--         <div class="col-lg-3 col-md-6">
-                <div data-animate-effect="fadeInRight" align="center">
-                <img src="assets/img/icons/matlab.png" alt="MATLAB" width="50" height="50"><p>MATLAB</p>
-                  </div>
-        </div> -->
+        
+        
        </div>
        <div class="row">
       <h5 style="color:#1af07d;">Software and Tools</h5>
@@ -250,7 +264,7 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
                   </div>
         </div>
 
-
+        
         <div class="col-6 col-sm-2">
         <div data-animate-effect="fadeInRight" align="center">
         <img src="assets/img/icons/arcmap.png" alt="ArcMap" width="50" height="50"><p>ArcMap</p>
@@ -261,7 +275,7 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
         <img src="assets/img/icons/imagine.png" alt="ERDAS IMAGINE" width="50" height="50"><p>ERDAS IMAGINE</p>
           </div>
         </div>
-      
+        
         <div class="col-6 col-sm-2">
         <div data-animate-effect="fadeInRight" align="center">
         <img src="assets/img/icons/git1.png" alt="GIT" width="50" height="50"><p>git</p>
@@ -282,16 +296,12 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
                 <img src="assets/img/icons/aws.png" alt="AWS" width="80" height="50"><p>Amazon Web Services</p>
                   </div>
         </div>
-     
+        
         <div class="col-6 col-sm-2">
                 <div data-animate-effect="fadeInRight" align="center">
                 <img src="assets/img/icons/gc.png" alt="GC" width="50" height="50"><p>Google Cloud</p>
                   </div>
-        </div>
-        <div class="col-6 col-sm-2">
-                <div data-animate-effect="fadeInRight" align="center">
-                <img src="assets/img/icons/maap.png" alt="GC" width="180" height="50"><p>NASA-ESA: Multi-Mission Algorithm and Analysis Platform</p>
-                  </div>
+        
         </div>
 
       </div>
@@ -307,7 +317,7 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
 
       <div class="section-title">
         <h2>Resume</h2>
-        <p>Check My Resume</p>  
+<!--         <p>Check My Resume</p>   -->
 		  <a href="assets/docs/CV.pdf"> <button class="btn download"><i class="bi bi-download"></i> <b>Download CV</b></button></a>		  
       </div>
 
@@ -315,31 +325,20 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
         <div class="col-lg-6">
           <h3 class="resume-title">Summary</h3>
           <div class="resume-item pb-0">
-            <h4>Kaushlendra Verma (Ph.D.) </h4>
-            <p><em><strong>Research interests:</strong> Satellite Altimetry | SWOT | Water Resource </em></p>
-            <p>
-            <ul>
-              <li>Meteo-France, Toulouse, France.</li>
-            </ul>
+            <h4>Kaushlendra V. (Postdoctoral Fellow) </h4>
+            <h5>2023 - present</h5>
+            <p><em><strong>Research interests:</strong> Space Hydrology | Satellite Altimetry | Data Assimilation </em></p>
+            <p><em>Institute: </em><span style="color:#00bbff"><a href="https://meteofrance.com/" target="_blank">Meteo-France</a></span>, Toulouse, France </br>
             </p>
+
           </div>
 
           <h3 class="resume-title">Education</h3>
-		  
-	   <div class="resume-item">
-            <h4>Post Doctorate </h4>
-            <h5>2023 - Present</h5>
-            <p><em>Institute: </em><span style="color:#00bbff"><a href="https://meteofrance.com/" target="_blank">Meteo-France, Toulouse</a></span>, France </br>
-               <em>Thesis title: </em> Towards a global scale SWOT-CTRIP hydrological data assimilation system<br>
-			         <em>Advisors: </em> Simon M. and Aaron B.<br>
-               		  
-			       </p>
-          </div>            
-	  <div class="resume-item">
-            <h4>PhD Remote Sensing </h4>
+		  <div class="resume-item">
+            <h4>PhD (Remote Sensing)</h4>
             <h5>2018 - 2022</h5>
             <p><em>Institute: </em><span style="color:#00bbff"><a href="https://www.iitb.ac.in/" target="_blank">Indian Institute of Technology Bombay</a></span>, India </br>
-               <em>Thesis title: </em> Satellite Altimetry for Inland Hydrology<br>
+               <em>Thesis title: </em> Potential of Surface Water and Ocean Topography (SWOT) Mission for Inland Hydrology<br>
 			         <em>Advisors: </em> Prof. J. Indu<br>
                <em>CPI: </em> 7.64/10.0<br>
 			  
@@ -360,16 +359,29 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
             <h5>2010 - 2014</h5>
             <p><em>Institute: </em><span style="color:#00bbff"><a href="https://aktu.ac.in/" target="_blank">Uttar Pradesh Technical University</a></span>, India</br>
                <em>Thesis title: </em> Analysis and design of multi-storied building (manual design)<br>
-               <em>Advisor: </em>  Mr. Shailendra Kumar Prajapati<br>
+               <em>Advisor: </em> Prof. Shailendra Kumar Prajapati<br>
                <em>CPI: </em> 75.88/100%<br>
             </p>         
           </div>
         </div>
         <div class="col-lg-6">
           <h3 class="resume-title">Professional Experience</h3>
+	   <div class="resume-item">
+            <h4>Visiting scholar</h4>
+            <h5>December 2022 -  January 2023 </h5>
+            <p><em>
+                <span style="color:#00bbff"><a href="https://umass.edu/" target="_blank">LEGOS & IRD </a></span><br>
+            </em></p>
+            <p>
+            <ul>
+              <li>Satellite altimetry for inland hydrology</li>
+            </ul>
+            </p>
+          </div>
+		
           <div class="resume-item">
             <h4>Teaching assistant</h4>
-            <h5>2018 - 2022</h5>
+            <h5>2019 - 2022</h5>
             <p><em>
                 <span style="color:#00bbff"><a href="https://www.civil.iitb.ac.in/" target="_blank">Remote Sensing</a></span>, <span style="color:#00bbff"><a href="https://www.iitb.ac.in/" target="_blank">Indian Institute of Technology Bombay</a></span>, India<br>
                 Level: Post graduate 
@@ -382,43 +394,172 @@ Prior to current position, he has successfully completed his Ph.D. in Remote Sen
             </ul>
             </p>
           </div>
+            
 
         </div>
       </div>
 
     </div>
   </section><!-- End Resume Section -->
- 
+
+  
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Publications</h2>
+        
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Journals</li>
+            <li data-filter=".filter-card">Conferences</li>
+            <li data-filter=".filter-web">reports</li>
+		
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container">
+        <div class="resume">
+        
+          <div class="col-lg-12 portfolio-item filter-app">
+
+            <div class="resume-item pb-0">
+              <p align="justify"><span style="color:#1af07d">Narayanarao Bhogapurapu</span>, Subhadip Dey, Avik Bhattacharya, Carlos López-Martínez, Irena Hajnsek and Y. S. Rao 2022 “Soil Permittivity Estimation Over Croplands Using Full and Compact Polarimetric SAR Data”. <i> IEEE Transactions on Geoscience and Remote Sensing</i>. doi: <span style="color:#00bbff"><a href="https://ieeexplore.ieee.org/document/9961197" target="_blank">10.1109/TGRS.2022.3224280</a> </span>
+              </p>
+            </div> 
+
+            
+
+          </div>
 
 
-<!-- ... (other sections) -->
 
-<!-- Vendor JS Files and Template Main JS File -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/purecounter/purecounter.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/js/main.js"></script>
+          <!--=================== CONFERENCES ===================-->  
+          <div class="col-lg-12 portfolio-item filter-card">
 
-<!-- Modal script -->
+            <div class="resume-item pb-0">
+              <p align="justify"><span style="color:#1af07d">Narayanarao Bhogapurapu</span>, Subhadip Dey,  Avik Bhattacharya,  Carlos L ́opez-Mart ́ınez, Irena Hajnsek  and Y. S. Rao 2022 "Soil permittivity estimation over croplands using PolSAR data," 2022 IEEE International Geoscience and Remote Sensing Symposium IGARSS, 2022, doi: <span style="color:#00bbff"><a href="https://doi.org/10.1109/IGARSS46834.2022.9883708" target="_blank">10.1109/IGARSS46834.2022.9883708</a></span> <span style="color:#00bbff">(Student paper competetion winner)</span> 
+              </p>
+            </div>
+
+            
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+      
+    </div>
+  </section><!-- End Portfolio Section -->
+
+
+  <!-- ======= Contact Section ======= -->
+  <--<section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Contact Me</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>My Address</h3>
+            <p>Meteo-France, Toulouse, India.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+
+        <a href="https://scholar.google.com/citations?user=ra9JeXYAAAAJ&hl=en" target="_blank"class="linkedin">
+              <i><img src="assets/img/icons/gsw.png" width=20px></i></a>
+        <a href="https://www.researchgate.net/profile/Kaushlendra-Verma-2"  target="_blank" class="linkedin">
+              <i><img src="assets/img/icons/rgw.png" width=20px></i></a>
+        <a href="https://kaushlendraverma.github.io/profile/" target="_blank" class="github">
+              <i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/narayanarao-bhogapurapu-072117106/" target="_blank" class="linkedin">
+              <i class="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/kaushlendraverma/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              
+
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Me</h3>
+            <p><a href="mailto:er.kaushlendrav@gmail.com">er.kaushlendrav@gmail.com</a><br>
+              
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            
+          </div>
+        </div>
+
+      
+      </div>
+
+    </div>
+  </section> --><!-- End Contact Section -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script type="text/javascript" src="assets/js/chart.js"></script>
+
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- <script src="assets/js/line.js"></script> -->
+<!-- <script src="assets/js/point.js"></script> -->
+<!-- <script src="assets/js/polygon.js"></script> -->
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<script src="assets/js/map_.js"></script>
+<!-- <script type="text/jsx" src="assets/js/globe.jsx"></script> -->
+
 <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
   <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
   <div class="w3-modal-content w3-animate-zoom">
-    <img id="img01" style="width:100%">
+    <img id="img01" style="width:100% ">
   </div>
 </div>
-
 <script>
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-  }
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
 </script>
-
 </body>
 
 </html>
-
